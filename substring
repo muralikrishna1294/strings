@@ -1,0 +1,49 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+    char string[30];
+    char substring[20];
+    int i,j,flag;
+    
+    printf("\nenter the string :");
+    scanf("%s",string);
+    printf("enter the substring :");
+    scanf("%s",substring);
+    
+    int count1=0; int count2=0;
+    while(string[count1]!='\0')
+        count1++;
+  
+    while(substring[count2]!='\0')
+        count2++;
+ for(int i=0;i<=count1-count2;i++){
+     
+     for(int j=i;j<i+count2;j++){
+         
+         flag=1;
+         if(string[j]!=substring[j-i]){
+             flag =0;
+             break;
+             
+         }
+     }
+     if(flag ==1)
+     break;
+ }
+ if(flag==1){
+     
+     printf("\n substring is found\n");
+ }else{
+     printf("\n substring is not found\n");
+ }
+    return 0;
+}
