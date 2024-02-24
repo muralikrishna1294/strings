@@ -1,0 +1,44 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+   
+   char string1[100];
+   char string2[100];
+   
+   printf("\n enter string1\n");
+   scanf("%s",string1);
+   printf("\n enter string2\n");
+   scanf("%s",string2);
+   
+   int coun1,coun2;
+  
+  while(string1[coun1]!=0){
+      
+      coun1++;
+      
+  }
+  while(string2[coun2]!=0){
+      
+      coun2++;
+  }
+   int j=0;
+   int i;
+   for(i=coun1,j;i<coun2 ,j <coun2;i++,j++){
+       
+       string1[i]=string2[j];
+       
+   }
+   string1[i]='\0';
+   printf("%s",string1);
+   
+   return 0;
+}
